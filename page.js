@@ -67,4 +67,15 @@ document.addEventListener("click", (e) => {
             alert("Invalid JSON format. Please try again.");
         }
     }
+    if (e.target && e.target.id === "downloadBtn") {
+        const elm = document.querySelector(".main-section");
+        window.domtoimage.toBlob(elm)
+            .then(function (blob) {
+                // FileSaver를 사용하여 변환된 Blob을 파일로 저장
+                window.saveAs(blob, 'myMikuCard.png');
+            })
+            .catch(function (error) {
+                console.error('이미지 생성 실패:', error);
+            });
+    }
 });

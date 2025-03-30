@@ -36,12 +36,7 @@
 
 .descWrap .job-checkBoxWrap input[type="checkbox"] {
 	appearance: none !important;
-}
-.descWrap .job-checkBoxWrap input[type="checkbox"]::before {
-	content: ",";
-}
-.descWrap .job-checkBoxWrap input[type="checkbox"]:first-of-type::before {
-	content: "";
+	display: none;
 }
 .descWrap .job-checkBoxWrap input[type="checkbox"]:checked + label {
 	border: 2px solid var(--miku-mint-darken);

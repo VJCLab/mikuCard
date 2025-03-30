@@ -23,7 +23,10 @@
 			하츠네 미쿠 명찰 생성기 - 나만의 미쿠 명찰을 만들어보세요!
 		</title>
 		<meta property="og:title" content="하츠네 미쿠 명찰 생성기" />
-		<meta property="og:image" content="https://vjclab.github.io/mikuCard/assets/cardPreview.png" />
+		<meta
+			property="og:image"
+			content="https://vjclab.github.io/mikuCard/assets/cardPreview.png"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -31,19 +34,21 @@
 		<link rel="stylesheet" href="./css/fonts.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./css/nameAndAvata.css" />
-		<link rel="stylesheet" href="./css/approchDateWrap.css">
+		<link rel="stylesheet" href="./css/approchDateWrap.css" />
 		<link rel="stylesheet" href="./css/chamPointsWrap.css" />
 		<link rel="stylesheet" href="./css/descWrap.css" />
 		<link rel="stylesheet" href="./css/cardBg.css" />
 		<!-- jquery -->
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- dom-to-image 라이브러리 (CDN) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+		<!-- FileSaver 라이브러리 (CDN) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
 		<script type="module" src="./page.js"></script>
 	</head>
-	<body
-		class="container main-container d-flex align-items-center justify-content-center"
-	>
+	<body class="container main-container">
 		<section class="main-section">
 			<div class="card">
 				<span class="cardBg">
@@ -91,16 +96,24 @@
 							<label for="userName">의 미쿠</label>
 						</div>
 						<div class="job-checkBoxWrap">
-							<input type="checkbox" name="singer" id="singer" />
+							<input
+								type="checkbox"
+								name="singer"
+								id="singer"
+								checked
+							/>
 							<label for="singer">노래</label>
+							<span>,</span>
 							<input type="checkbox" name="talker" id="talker" />
 							<label for="talker" title="토크로이드(tts) 등등"
 								>말하기</label
 							>
+							<span>,</span>
 							<input type="checkbox" name="model" id="model" />
 							<label for="model" title="mmd(3d) 또는 일러스트(2d)"
 								>모델</label
 							>
+							<span>,</span>
 							<input type="checkbox" name="event" id="event" />
 							<label
 								for="event"
@@ -125,7 +138,7 @@
 								name="approchDate"
 								id="approchDate"
 								class="approchDate"
-								value="2007-08-31"
+								value="2007-09-04"
 								autocomplete="off"
 								aria-label="첫만남의 날"
 								min="2007-08-31"
@@ -134,7 +147,7 @@
 								name="approchMsg"
 								id="approchMsg"
 								rows="2"
-								placeholder="처음 만난 이유는?"
+								placeholder="파돌리기송의 경쾌한 리듬에 홀린 순간, 운명적인 만남의 시작"
 							></textarea>
 						</div>
 						<div class="chamPointsWrap">
@@ -177,6 +190,20 @@
 						aria-selected="true"
 					>
 						메인 라이선스
+					</button>
+				</li>
+				<li class="nav-item">
+					<button
+						class="nav-link"
+						id="download-tab"
+						data-bs-toggle="tab"
+						data-bs-target="#download-tab-pane"
+						type="button"
+						role="tab"
+						aria-controls="download-tab-pane"
+						aria-selected="false"
+					>
+						다운로드
 					</button>
 				</li>
 				<li class="nav-item" role="presentation">
@@ -230,6 +257,26 @@
 						trademark of Yamaha Corporation. <br />
 						© 2025 sodadayo20. All rights reserved.
 					</p>
+				</div>
+				<div
+					class="download-pane fade my-2"
+					id="download-tab-pane"
+					role="tabpanel"
+					aria-labelledby="download-tab"
+					tabindex="0"
+				>
+					<p class="downloadDesc">
+						명찰을 다운로드하려면, 아래 버튼을 클릭하세요.
+						<br />
+						다운로드 후, 이미지 편집 프로그램, 겔러리에서 열 수
+						있습니다.
+					</p>
+					<button
+						class="btn btn-primary downloadBtn"
+						id="downloadBtn"
+					>
+						다운로드하기
+					</button>
 				</div>
 				<div
 					class="tab-pane fade"

@@ -19,6 +19,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	gap: 1rem;
 }
 .main-container .main-section,
 .main-section .card {
@@ -31,7 +32,7 @@ body {
 	border: none;
 }
 .main-container .main-section {
-	margin-top: auto;
+	margin-top: 1rem;
 	margin-bottom: auto;
 }
 
