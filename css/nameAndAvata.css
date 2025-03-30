@@ -1,0 +1,35 @@
+.nameAndAvataWrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2.5rem 0 1rem 0;
+	width: 13.6rem;
+}
+.avatarImgWrap {
+	max-width: 12.5rem;
+	max-height: 12.5rem;
+	width: 12.5rem;
+	height: 12.5rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.avatarImgWrap img {
+	width: 100%;
+}
+
+.nameWrap {
+	padding: 0.25rem;
+	background-color: var(--miku-mint-secondary);
+	border-radius: var(--bs-card-border-radius);
+}
+.nameWrap .avataName {
+	margin: 0;
+	font-family: "Danjo-bold-Regular", Arial;
+}
+.nameWrap .bDateWrap {
+	font-family: "Ownglyph_ParkDaHyun", sans-serif;
+	font-size: 1.3rem;
+	display: flex;
+}

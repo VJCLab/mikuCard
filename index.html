@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="하츠네 미쿠 테마의 캐릭터 명찰을 간단히 생성하고 공유할 수 있는 사이트입니다. 다양한 템플릿과 커스터마이징 옵션으로 자신만의 미쿠 명찰을 만들어 보세요!"
+		/>
+		<meta
+			property="og:description"
+			content="다양한 템플릿과 옵션으로 나만의 미쿠 명찰을 만들고, 친구들과 공유해 보세요!"
+		/>
+		<!-- 검색 엔진 키워드(중요도 낮아졌으나, 참고용으로 사용 가능) -->
+		<meta
+			name="keywords"
+			content="하츠네 미쿠, 캐릭터 명찰, 미쿠 명찰 생성, 보컬로이드, Hatsune Miku, 나만의 명찰"
+		/>
+		<!-- 작성자 또는 사이트명 -->
+		<meta name="author" content="sodadayo20" />
+		<meta property="og:type" content="website" />
+		<title>
+			하츠네 미쿠 명찰 생성기 - 나만의 미쿠 명찰을 만들어보세요!
+		</title>
+		<meta property="og:title" content="하츠네 미쿠 명찰 생성기" />
+		<meta property="og:image" content="./assets/cardPreview.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="./css/fonts.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/nameAndAvata.css" />
+		<link rel="stylesheet" href="./css/approchDateWrap.css">
+		<link rel="stylesheet" href="./css/chamPointsWrap.css" />
+		<link rel="stylesheet" href="./css/descWrap.css" />
+		<link rel="stylesheet" href="./css/cardBg.css" />
+		<!-- jquery -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script type="module" src="./page.js"></script>
+	</head>
+	<body
+		class="container main-container d-flex align-items-center justify-content-center"
+	>
+		<section class="main-section">
+			<div class="card">
+				<span class="cardBg">
+					<div class="strapWrap-tt"></div>
+					<div class="strapWrap-rt">
+						<div class="strap-inner"></div>
+					</div>
+					<div class="innerBlock"></div>
+					<span class="imgBg"></span>
+					<span class="mikuNumber">01</span>
+				</span>
+
+				<div class="card-body text-center">
+					<div class="nameAndAvataWrap">
+						<div class="avatarImgWrap rounded-3">
+							<img
+								src="./assets/charImg.png"
+								alt="main profile image"
+								width="200"
+								height="200"
+								title="이미지 클릭시, 이미지와 위치를 변경할 수 있습니다."
+							/>
+						</div>
+						<div class="nameWrap d-flex flex-column">
+							<h3 class="avataName">하츠네 미쿠</h3>
+							<div class="bDateWrap">
+								<time id="avataBdate" datetime="2007-08-31"
+									>2007년 8월 31일</time
+								>
+								<span>에 테어남.</span>
+							</div>
+						</div>
+					</div>
+					<div class="descWrap">
+						<div class="titleWrap">
+							<input
+								type="text"
+								name="userName"
+								id="userName"
+								class="userName m-0"
+								spellcheck="false"
+								autocomplete="off"
+								placeholder="마스터"
+							/>
+							<label for="userName">의 미쿠</label>
+						</div>
+						<div class="job-checkBoxWrap">
+							<input type="checkbox" name="singer" id="singer" />
+							<label for="singer">노래</label>
+							<input type="checkbox" name="talker" id="talker" />
+							<label for="talker" title="토크로이드(tts) 등등"
+								>말하기</label
+							>
+							<input type="checkbox" name="model" id="model" />
+							<label for="model" title="mmd(3d) 또는 일러스트(2d)"
+								>모델</label
+							>
+							<input type="checkbox" name="event" id="event" />
+							<label
+								for="event"
+								title="각종 이밴트에 아티스트 로써 참여"
+								>행사 참여</label
+							>
+						</div>
+						<div class="destinyWrap">
+							<label for="destiny">미쿠가 살아가는 건...</label>
+							<input
+								type="text"
+								name="destiny"
+								id="destiny"
+								spellcheck="false"
+								placeholder="마스터를 사랑하기 위해서!"
+							/>
+						</div>
+						<div class="approchDateWrap">
+							<label for="approchDate">첫만남의 날</label>
+							<input
+								type="date"
+								name="approchDate"
+								id="approchDate"
+								class="approchDate"
+								value="2007-08-31"
+								autocomplete="off"
+								aria-label="첫만남의 날"
+								min="2007-08-31"
+							/>
+							<textarea
+								name="approchMsg"
+								id="approchMsg"
+								rows="2"
+								placeholder="처음 만난 이유는?"
+							></textarea>
+						</div>
+						<div class="chamPointsWrap">
+							<label for="chamPoints">매력 포인트</label>
+							<textarea
+								name="chamPoints"
+								id="chamPoints"
+								spellcheck="false"
+								placeholder="귀여워! 노래 잘해! 상냥해!"
+								rows="2"
+							></textarea>
+						</div>
+						<!-- 한마디 -->
+						<div class="oneWordWrap">
+							<label for="oneWord">한마디</label>
+							<textarea
+								name="oneWord"
+								id="oneWord"
+								spellcheck="false"
+								placeholder="미쿠: 마스터! 사랑해!
+내일도 같이 놀자!"
+								rows="3"
+							></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<ul class="nav nav-tabs" id="footerTabs" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link active"
+						id="license-tab"
+						data-bs-toggle="tab"
+						data-bs-target="#license-tab-pane"
+						type="button"
+						role="tab"
+						aria-controls="license-tab-pane"
+						aria-selected="true"
+					>
+						메인 라이선스
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link"
+						id="more-tab"
+						data-bs-toggle="tab"
+						data-bs-target="#more-tab-pane"
+						type="button"
+						role="tab"
+						aria-controls="more-tab-pane"
+						aria-selected="false"
+					>
+						더보기
+					</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="footerTabContent">
+				<div
+					class="tab-pane fade show active"
+					id="license-tab-pane"
+					role="tabpanel"
+					aria-labelledby="license-tab"
+					tabindex="0"
+				>
+					<p>
+						본 사이트는 하츠네 미쿠의 공식 사이트와는 관련이 없으며,
+						하츠네 미쿠 캐릭터의 2차 창작물을 제작·공유하기 위한
+						팬메이드 웹사이트입니다.
+						<br />
+						하츠네 미쿠 및 해당 캐릭터의 모든 권리는
+						<a
+							href="https://www.crypton.net/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Crypton Future Media, INC.
+						</a>
+						에게 있으며,
+						<a
+							href="https://piapro.jp/license/pcl"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Piapro Character License
+						</a>
+						에 따라 비영리(비상업적) 목적으로만 사용하고 있습니다.
+					</p>
+					<p>
+						© Crypton Future Media, INC. | VOCALOID is a registered
+						trademark of Yamaha Corporation. <br />
+						© 2025 sodadayo20. All rights reserved.
+					</p>
+				</div>
+				<div
+					class="tab-pane fade"
+					id="more-tab-pane"
+					role="tabpanel"
+					aria-labelledby="more-tab"
+					tabindex="0"
+				>
+					<h3>사용된폰트 정보들</h3>
+					<ul class="fontListWrap">
+						<li>
+							<a
+								href="https://www.ownglyph.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								온글잎(Ownglyph)
+							</a>
+							<code>ParkDaHyun</code>
+							<span>,</span>
+							<code>corncorn-Rg</code>
+						</li>
+						<li>
+							단조(Danjo)
+							<code>Danjo-bold-Regular</code>
+						</li>
+						<li>
+							<a
+								href="https://assa.computer/delta/v1"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								아싸컴 무료고딕
+							</a>
+							<code>AssacomFreeGothicTTF-Regular</code>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

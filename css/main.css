@@ -1,0 +1,48 @@
+:root {
+	--miku-black-primary: #373b3e;
+	--miku-pink-primary: #ff1688;
+	--miku-mint-secondary: #86cecb;
+	--miku-mint-darken: #307976;
+	--placeHolder-color: #757575;
+	--miku-calendar-filter: invert(39%) sepia(8%) saturate(2812%)
+		hue-rotate(129deg) brightness(99%) contrast(86%);
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.main-container .main-section,
+.main-section .card {
+	position: relative;
+	max-width: 39rem;
+	min-width: 39rem;
+	min-height: 24rem;
+	max-height: 24rem;
+	overflow: hidden;
+	border: none;
+}
+.main-container .main-section {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.main-section .card-body {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 3.9rem;
+	bottom: 0;
+	display: flex;
+	padding: 1rem 0 1rem 1rem;
+	gap: 1em;
+}

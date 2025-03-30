@@ -1,0 +1,98 @@
+.descWrap {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1rem;
+}
+.descWrap .titleWrap,
+.approchDateWrap,
+.descWrap .destinyWrap,
+.chamPointsWrap,
+.oneWordWrap {
+	font-family: "Ownglyph_ParkDaHyun", sans-serif;
+	display: flex;
+	width: 100%;
+}
+
+.descWrap .titleWrap {
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: center;
+}
+.titleWrap .userName {
+	color: var(--miku-mint-darken);
+	font-weight: bolder;
+	text-align: center;
+	min-width: 13rem;
+	max-width: 13rem;
+	padding: 0;
+	appearance: none;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
+.descWrap .job-checkBoxWrap input[type="checkbox"] {
+	appearance: none !important;
+}
+.descWrap .job-checkBoxWrap input[type="checkbox"]::before {
+	content: ",";
+}
+.descWrap .job-checkBoxWrap input[type="checkbox"]:first-of-type::before {
+	content: "";
+}
+.descWrap .job-checkBoxWrap input[type="checkbox"]:checked + label {
+	border: 2px solid var(--miku-mint-darken);
+}
+.descWrap .job-checkBoxWrap label {
+	border: 2px solid transparent;
+	font-family: "Ownglyph_ParkDaHyun", sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+	margin: 0.1rem 0;
+}
+
+.descWrap .destinyWrap {
+	flex-direction: column;
+	line-height: initial;
+}
+.destinyWrap label {
+	font-size: 1.4rem;
+	line-height: 0.9rem;
+}
+.destinyWrap input,
+.approchDateWrap #approchMsg {
+	color: var(--miku-mint-darken);
+	font-weight: bolder;
+	text-align: center;
+	line-height: 1.4rem;
+	font-size: 1.4rem;
+	padding: 0;
+	appearance: none;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
+.oneWordWrap {
+	flex-direction: column;
+	font-size: 1.6rem;
+	line-height: 1.4rem;
+	letter-spacing: 2px;
+	margin-left: -3rem;
+	align-items: flex-start;
+}
+.oneWordWrap textarea {
+	padding: 0;
+	width: 110%;
+	margin: 0;
+	appearance: none;
+	border: none;
+	/* border-bottom: 2px solid black; */
+	color: var(--miku-mint-darken);
+	background-color: transparent;
+	min-height: 4.5rem;
+	max-height: 4.5rem;
+	resize: none;
+}

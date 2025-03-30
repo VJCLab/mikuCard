@@ -1,0 +1,68 @@
+.cardBg {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--miku-mint-secondary);
+}
+.cardBg .strapWrap-rt {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 3.9rem;
+	background-color: var(--miku-black-primary);
+	display: flex;
+	justify-content: center;
+}
+.cardBg .strapWrap-rt .strap-inner {
+	width: 1rem;
+	height: inherit;
+	background-color: var(--miku-pink-primary);
+}
+
+.cardBg .strapWrap-lt {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+.cardBg .strapWrap-tt {
+	position: absolute;
+	top: 0;
+	left: 3.9rem;
+	right: 0;
+	height: 1rem;
+	background-color: #bec8d1;
+}
+.cardBg .innerBlock {
+	position: absolute;
+	top: 0;
+	bottom: 1rem;
+	left: 3.9rem;
+	right: 0;
+	background-color: #fff;
+	z-index: -1;
+}
+.cardBg .imgBg {
+	position: absolute;
+	top: 2.9rem;
+	left: 1rem;
+	width: 220px;
+	height: 220px;
+	background-color: var(--miku-mint-secondary);
+	z-index: 0;
+	border-radius: var(--bs-card-border-radius);
+}
+.cardBg .mikuNumber {
+	position: absolute;
+	bottom: 1.5rem;
+	right: 4.2rem;
+	z-index: -1;
+	font-size: 3.9rem;
+	line-height: 3.2rem;
+	font-family: "AssacomFreeGothicTTF-Regular", sans-serif;
+	color: var(--miku-pink-primary);
+}
